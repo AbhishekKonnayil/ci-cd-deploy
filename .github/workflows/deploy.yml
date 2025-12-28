@@ -1,0 +1,8 @@
+name: Deploy
+-on:
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: "Git Branch to deploy"
+        required: true
+        default: "main"
