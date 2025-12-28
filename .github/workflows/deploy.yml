@@ -6,3 +6,13 @@ name: Deploy
         description: "Git Branch to deploy"
         required: true
         default: "main"
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: stg
+
+    steps:
+      - name: Checkout
+        uses: actions/Checkout@v4
+        with:
+          ref: ${{ inputs.branch }}
