@@ -16,3 +16,11 @@ jobs:
         uses: actions/Checkout@v4
         with:
           ref: ${{ inputs.branch }}
+      
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      
+      - name: Install Dependencies
+        run: npm install  
