@@ -28,7 +28,7 @@ jobs:
       - name: Build
         run: npm run build
       
-      - uses: Deploy
+      - name: Deploy
         run: firebase deploy --token ${{ secrets.FIREBASE_TOKEN }}
          
       
